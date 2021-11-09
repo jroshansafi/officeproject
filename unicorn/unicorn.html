@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn Konami</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+    <h1>unicorn</h1>
+    <script>
+               const pressed = [];
+        const secretCode = 'rosh';
+        window.addEventListener('keyup', function(event) {
+            console.log(event.key);
+            pressed.push(event.key);
+
+             // const output = pressed.slice(-secretCode.length-1, pressed.length-secretCode.length); // get last four words
+            // if(pressed.join('').includes(secretCode)) {
+                    //instead of
+            // const output = pressed.slice(0, pressed.length-secretCode.length); // get last four words
+            // if(pressed.join('').includes(secretCode)) {
+
+            pressed.splice(0, pressed.length - secretCode.length);
+            const output = pressed.join("");
+
+                if(output===secretCode){
+                alert("Boom");
+                console.log('Ding Ding!');
+                cornify_add();
+            }
+            console.log(pressed);
+        });
+
+    //     const pressed = [ ];
+    // const secret = 'whatever';
+    //window.addEventListener('keyup', e => {
+      //pressed.push(e.key);
+
+    //   pressed.splice(0, pressed.length - secret.length);
+
+    //   const word = pressed.join('');
+
+    //   if (word === secret) cornify_add();
+
+    // });
+
+        
+
+        // let pressedValue = "";
+        // const secret = 'rosh';
+
+        // window.addEventListener('keyup', event => {
+        //     console.log(event.key);
+        //     pressedValue += event.key;
+        //     // const word = pressedValue.substring(pressedValue.length - secret.length); // get last four words
+
+        //   const  deleteCount = pressedValue.length - secret.length;
+        //   const output = pressedValue.splice(0, deleteCount);
+        //     if (output === secret) {
+        //         alert("Boom");
+        //         console.log('Ding Ding!');
+        //         // cornify_add();
+        //     }
+        //     console.log(pressedValue);
+        // });
+
+    </script>
+</body>
+
+</html>

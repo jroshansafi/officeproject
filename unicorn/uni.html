@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn Konami</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+
+<body>
+    <h1>unicorn</h1>
+    <script>
+        //        const pressed = [];
+        // const secretCode = 'rosh';
+        // window.addEventListener('keyup', (event) => {
+        //     console.log(event.key);
+        //     pressed.push(event.key);
+        //     pressed.splice(-secretCode.length - 1, pressed.length - secretCode);
+        //     if(pressed.join('').includes(secretCode)) {
+        //         alert("Boom");
+        //         console.log('Ding Ding!');
+        //         cornify_add();
+        //     }
+        //     console.log(pressed);
+        // });
+
+        let pressedValue = "";
+        const secret = 'rosh';
+
+        window.addEventListener('keyup', e => {
+
+            pressedValue += e.key;
+            const word = pressedValue.substring(pressedValue.length - secret.length); // get last four words
+
+            if (word === secret) {
+                alert("pressed " + secret);
+                console.log('Ding Ding!');
+                cornify_add();
+            }
+        }); -->
+
+        <!-- // const pressed = [ ];
+        // const secret = 'safi';
+        //
+        // window.addEventListener('keyup', e => {
+        //
+        //   pressed.push(e.key);
+        //
+        //   const  deleteCount = pressed.length - secret.length;
+        //   const output = pressed.splice(0, deleteCount);
+        //
+        //   const word = pressed.join('');
+        //
+        //   if (word === secret){
+        //     alert("pressed " + secret);
+        //   }
+        //
+        // });
+
+// let pressedKey = "";
+// const secret = "safi";
+//   window.addEventListener('keyup', function (event) {
+
+//     allPressedKey+=eventKey;
+//
+//     const lastWord = pressedKey.substring(pressedKey.length - secret.length);
+//
+//     console.log("all words  : " +  pressedKey);
+//     console.log("last typed words  : " +  lastWord);
+
+//     if(lastWord === secret){
+//       alert("Boom");
+//       cornify_add();
+//     }
+//
+// });
+
+// let allPressedValues = [];
+// const secret = "safi";
+//   window.addEventListener('keyup', function (event) {
+
+//   const  currentKey = event.key;
+//     // allPressedKey+=currentKey;
+//     allPressedValues.push(currentKey)
+
+//     const startIndex = allPressedValues.length - secret.length;
+
+//   //  const lastWord = allPressedKey.substring(startIndex)
+
+
+//     // allPressedValues --- > ["1","2", "3", "4", "5"]
+//     const lastWordList = allPressedValues.slice(startIndex); // ["2"]
+
+
+//     const lastWord =  lastWordList.join("");
+
+//     console.log("all words  : " +  allPressedValues);
+//     console.log("last typed words  : " +  lastWord);
+
+//     if(lastWord === secret){
+//       alert("Boom")
+//     }
+
+// });
+
+// window.addEventListener('keyup', e => {
+//
+//   pressed.push(e.key);
+//
+//   const lastFourValues = pressed.slice(pressed.length - secret.length);
+//
+//   const word = lastFourValues.join("") // get last four words
+//
+//   if (word === secret){
+//     alert("pressed " + secret);
+//   }
+//
+// });
+
+//     </script>
+// </body>
+
+// </html> -->
+
+const pressed = [];
+const secretCode = 'rosh';
+
+function event(){
+    pressed.push(event.key);
+
+pressed.splice(0, pressed.length - secretCode.length);
+const output = pressed.join("");
+
+if(output===secretCode) {
+    alert("Boom");
+    console.log('Ding Ding!');
+}
+console.log(pressed);
+}
+
+event();
